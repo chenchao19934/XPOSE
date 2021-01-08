@@ -1,3 +1,6 @@
+// 当前环境，根据环境生成对应代理
+const curMode = process.env.NODE_ENV;
+
 module.exports = {
   // 部署应用包时的基本 URL,用法和 webpack 本身的 output.publicPath 一致
   publicPath: './',
@@ -34,9 +37,20 @@ module.exports = {
   pwa: {},
   // webpack-dev-server 相关配置
   devServer: {
-    hot: true,
-    open: true,
-    port: 8080,
-    host: "0,0,0,0"
+    port: 8080, // 端口号
+    host: 'localhost',
+    https: false, // https:{type:Boolean}
+    open: true, //配置自动启动浏览器
+    // proxy: 'http://localhost:4000' // 配置跨域处理,只有一个代理
+    // proxy: {
+    //     '/api': {
+    //         target: '<url>',
+    //         ws: true,
+    //         changeOrigin: true
+    //     },
+    //     '/foo': {
+    //         target: '<other_url>'
+    //     }
+    // },  // 配置多个代理
   },
 }
