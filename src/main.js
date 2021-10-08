@@ -9,6 +9,8 @@ import 'jquery-ui-dist/jquery-ui.min.css';
 import globalWs from './utils/globalWs';
 // 自定义字体
 import './assets/css/font.css';
+// 动态引入模块
+// import './utils/require.context';
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
