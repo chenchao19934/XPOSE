@@ -5,7 +5,7 @@
         <div class="company-name"><img src="./assets/xpose_logo.png" alt=""></div>
         <div class="company-link">
           <div><img src="./assets/rgbLink_logo.png" alt=""></div>
-          <div>www.rgblink.com</div>
+          <div>www.rgblink.com <i class="icon-customer"></i> </div>
         </div>
       </div>
       <div class="login-info">

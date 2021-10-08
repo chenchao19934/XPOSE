@@ -7,6 +7,9 @@ import store from './store';
 import 'jquery-ui-dist/jquery-ui';
 import 'jquery-ui-dist/jquery-ui.min.css';
 import globalWs from './utils/globalWs';
+// 自定义字体
+import './assets/css/font.css';
+
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 
