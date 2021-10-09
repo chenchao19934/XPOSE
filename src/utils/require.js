@@ -26,8 +26,9 @@ service.interceptors.request.use((config) => {
 
 service.interceptors.response.use((res) => {
     //对响应数据做些事
-    if (res.status != 200) {
-        Message.error(res.msg);
+    const { code, msg } = res.data;
+    if (code != 200) {
+        Message.error(msg);
         return Promise.reject(res);
     }
     return res.data;

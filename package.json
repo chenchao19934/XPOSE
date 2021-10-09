@@ -21,6 +21,7 @@
     "element-ui": "^2.14.1",
     "jquery": "^3.5.1",
     "jquery-ui-dist": "^1.12.1",
+    "mockjs": "^1.1.0",
     "qrcodejs2": "0.0.2",
     "vue": "^2.6.11",
     "vue-draggable-resizable-gorkys": "^2.4.4",

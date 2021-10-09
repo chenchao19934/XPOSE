@@ -2,4 +2,5 @@
  * @description 通用配置
  */
 const setting = require('./setting.config')
-module.exports = setting
+const network = require('./net.config')
+module.exports = Object.assign({}, setting, network)

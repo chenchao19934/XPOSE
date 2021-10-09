@@ -20,7 +20,11 @@ process.env.VUE_APP_UPDATE_TIME = time
 process.env.VUE_APP_VERSION = version
 
 const resolve = (dir) => path.join(__dirname, dir)
-console.log(process.env.NODE_ENV !== 'development');
+const mockServer = () => {
+  if (process.env.NODE_ENV === 'development') return require('./mock')
+  else return ''
+}
+
 module.exports = {
   publicPath,
   assetsDir,
@@ -32,29 +36,30 @@ module.exports = {
     port: devPort,
     open: true,
     noInfo: false,
-    proxy: {
-      "/api": {
-        target: 'http://192.168.0.117/api',
-        // target: 'http://192.168.0.203/api',
-        // target: 'http://192.168.0.205/api',
-        pathRewrite: {
-          "^/api": ""
-        },
-        changeOrigin: true,
-        ws: true,
-        // ws: true,//websocket支持
-        secure: false
-      },
-      "/code": {
-        target: 'https://xposereg.azurewebsites.net',
-        pathRewrite: {
-          "^/code": ""
-        },
-        changeOrigin: true,
-        secure: false,
-        ws: true,
-      }
-    }
+    // proxy: {
+    //   "/api": {
+    //     target: 'http://192.168.0.117/api',
+    //     // target: 'http://192.168.0.203/api',
+    //     // target: 'http://192.168.0.205/api',
+    //     pathRewrite: {
+    //       "^/api": ""
+    //     },
+    //     changeOrigin: true,
+    //     ws: true,
+    //     // ws: true,//websocket支持
+    //     secure: false
+    //   },
+    //   "/code": {
+    //     target: 'https://xposereg.azurewebsites.net',
+    //     pathRewrite: {
+    //       "^/code": ""
+    //     },
+    //     changeOrigin: true,
+    //     secure: false,
+    //     ws: true,
+    //   }
+    // },
+    after: mockServer(),
   },
   configureWebpack() {
     //如果有更改devtool的行为，请先判断是否是production环境
