@@ -12,8 +12,6 @@ import './assets/css/font.css';
 // 动态引入模块
 // import './utils/require.context';
 
-require('../mock');
-
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 

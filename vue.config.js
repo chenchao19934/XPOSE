@@ -59,7 +59,7 @@ module.exports = {
     //     ws: true,
     //   }
     // },
-    after: mockServer(),
+    before: mockServer(),
   },
   configureWebpack() {
     //如果有更改devtool的行为，请先判断是否是production环境
