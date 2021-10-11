@@ -72,9 +72,7 @@ module.exports = {
           '@': resolve('src'),
         },
       },
-      plugins: [
-        new Webpack.ProvidePlugin(providePlugin)
-      ],
+      plugins: [new Webpack.ProvidePlugin(providePlugin)],
     }
   },
   chainWebpack(config) {
@@ -86,7 +84,7 @@ module.exports = {
         chunks: 'all',
         cacheGroups: {
           chunk: {
-            name: 'vab-chunk',
+            name: 'xpost-chunk',
             test: /[\\/]node_modules[\\/]/,
             minSize: 131072,
             maxSize: 524288,

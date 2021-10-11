@@ -5,20 +5,14 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "workbench.colorTheme": "One Monokai",
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
-  "emmet.triggerExpansionOnTab": true,
   "editor.formatOnSave": true,
-  "javascript.format.enable": true,
   "git.enableSmartCommit": true,
   "git.autofetch": true,
-  "git.confirmSync": false,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "liveServer.settings.donotShowInfoMsg": true,
-  "explorer.confirmDelete": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "files.exclude": {
